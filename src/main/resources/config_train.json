@@ -1,0 +1,23 @@
+{
+    "dataset":{
+        "raw_path":"/data/raw_new/",
+        "gt_path": "/data/gt_new_no_empty_patches_binary/",
+        "output_path":"/data/train_output/",
+        "checkpoint_path":"models/",
+        "delivr_model_path":"/data/inference_weights.tar"
+    },
+    "training":{
+        "epochs":5,
+        "learning_rate":1e-3,
+        "normalization":false,
+        "retrain":false,
+        "tta":true,
+        "test_list":"/data/test"
+    },
+    "network":{
+        "batch_size":1,
+        "num_workers":-1
+    }
+    
+}
+

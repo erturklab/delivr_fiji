@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+		http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.scijava</groupId>
+		<artifactId>pom-scijava</artifactId>
+		<version>29.2.1</version>
+		<relativePath />
+	</parent>
+
+	<groupId>delivr-plugin</groupId>
+	<artifactId>delivr-gui</artifactId>
+	<version>1.1.1-train</version>
+
+	<name>DELIVR FIJI</name>
+	<description>DELIVR Fiji plugin</description>
+	<url>https://github.com/[MY-ORG]/[MY-REPO]</url>
+	<inceptionYear>2016</inceptionYear>
+	<organization>
+		<name>[MY-ORGANIZATION-NAME]</name>
+		<url>[MY-ORGANIZATION-WEB-SITE]</url>
+	</organization>
+	<licenses>
+		<license>
+			<name>Unlicense</name>
+			<url>https://unlicense.org/</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>[MY-GITHUB-ID]</id>
+			<name>Rami Al-Maskari</name>
+			<url>https://imagej.net/User:[MY-IMAGEJ-WIKI-ACCOUNT]</url>
+		</developer>
+	</developers>
+	<contributors>
+		<contributor>
+			<name>None</name>
+		</contributor>
+	</contributors>
+
+	<mailingLists>
+		<mailingList>
+			<name>Image.sc Forum</name>
+			<archive>https://forum.image.sc/tags/imagej</archive>
+		</mailingList>
+	</mailingLists>
+
+	<scm>
+		<connection>scm:git:git://github.com/[MY-ORG]/[MY-REPO]</connection>
+		<developerConnection>scm:git:git@github.com:[MY-ORG]/[MY-REPO]</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/[MY-ORG]/[MY-REPO]</url>
+	</scm>
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>http://github.com/[MY-ORG]/[MY-REPO]/issues</url>
+	</issueManagement>
+	<ciManagement>
+		<system>None</system>
+	</ciManagement>
+
+	<properties>
+		<main-class>SwingDELIVR</main-class>
+		<license.licenseName>unlicense</license.licenseName>
+		<license.copyrightOwners>N/A</license.copyrightOwners>
+		<license.projectName>ImageJ software for multidimensional image processing and analysis.</license.projectName>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>scijava.public</id>
+			<url>https://maven.scijava.org/content/groups/public</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>imagej</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>net.imglib2</groupId>
+			<artifactId>imglib2-ij</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>imagej-legacy</artifactId>
+		</dependency>
+		<dependency>
+        	<groupId>com.fasterxml.jackson.core</groupId>
+        	<artifactId>jackson-core</artifactId>
+        	<version>2.12.4</version>
+    	</dependency>
+    	<dependency>
+        	<groupId>com.fasterxml.jackson.core</groupId>
+        	<artifactId>jackson-databind</artifactId>
+        	<version>2.12.4</version>
+    	</dependency>
+   		<dependency>
+        	<groupId>com.fasterxml.jackson.core</groupId>
+        	<artifactId>jackson-annotations</artifactId>
+        	<version>2.12.4</version>
+    	</dependency>
+	</dependencies>
+	<build>
+		<!--<plugins>
+	      <plugin>
+	        <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-enforcer-plugin</artifactId>
+	        <version>3.2.1</version>
+	        <executions>
+	          <execution>
+	            <id>enforce-java</id>
+	            <goals>
+	              <goal>enforce</goal>
+	            </goals>
+	            <configuration>
+	              <rules>
+	                <requireJavaVersion>
+	                  <version>18.0.2</version>
+	                </requireJavaVersion>
+	              </rules>    
+	            </configuration>
+	          </execution>
+	        </executions>
+	      </plugin>
+	    </plugins>-->
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.json</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+	<!-- 
+	<build>
+		<resources>
+			<resource>
+				<directory>/home/rami/Documents/deliver-docker/</directory>
+				<includes>
+					<include>test.txt</include>
+				</includes>
+			</resource>
+		</resources>
+	</build>
+	-->
+</project>
